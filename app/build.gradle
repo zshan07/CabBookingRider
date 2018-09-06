@@ -30,6 +30,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //Add Library
+    implementation 'me.zhanghai.android.materialratingbar:library:1.2.0'
     implementation 'com.google.maps.android:android-maps-utils:0.5+'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'

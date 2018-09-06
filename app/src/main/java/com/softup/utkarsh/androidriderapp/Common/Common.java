@@ -8,11 +8,14 @@ import com.softup.utkarsh.androidriderapp.Remote.IGoogleAPI;
 
 public class Common
 {
+    public static boolean isDriverFound=false;
+    public static String driverId= "";
     public static final String driver_tb1 = "Drivers";
     public static final String user_driver_tb1 = "DriversInformation";
     public static final String user_rider_tb1 = "RidersInformation";
     public static final String pickup_request_tb1 = "PickupRequest";
     public static final String token_tb1 = "Tokens";
+    public static final String rate_detail_tb1 = "RateDetails";
 
     public static final String fcmURL = "https://fcm.googleapis.com/";
     public static final String googleAPIUrl = "https://maps.googleapis.com";

@@ -14,6 +14,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.softup.utkarsh.androidriderapp.R;
+import com.softup.utkarsh.androidriderapp.RateActivity;
 
 public class MyFirebaseMessaging extends FirebaseMessagingService {
 
@@ -35,7 +36,17 @@ public class MyFirebaseMessaging extends FirebaseMessagingService {
         {
            showArrivedNotification(remoteMessage.getNotification().getBody());
         }
+        else if (remoteMessage.getNotification().getTitle().equals("DropOff"))
+        {
+            openRateActivity(remoteMessage.getNotification().getBody());
+        }
 
+    }
+
+    private void openRateActivity(String body) {
+        Intent intent = new Intent(this, RateActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     private void showArrivedNotification(String body) {
